@@ -1,0 +1,66 @@
+#ContainerDiv1 {
+    width:100%;
+    text-align:center;
+}
+#ContainerDiv2 {
+    width:100%;
+    text-align:center;
+}
+#ContainerDiv3 {
+    width:100%;
+    text-align:center;
+}
+
+#FirstDiv{
+  float:left;
+  background-color : #99FFCC;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+#SecondDiv{
+  float:right;
+  background-color : #99AACC;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+#ThirdDiv{
+  float:left;
+  background-color : #99BBAA;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+#FourthDiv{
+  float:right;
+  background-color : #99CCFF;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+#FifthDiv{
+  float:left;
+  background-color : #99AABB;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+#SixthDiv{
+  float:right;
+  background-color : #99AABB;
+  margin: auto;
+  width: 50%;
+  height: 20px
+  padding: 2px;
+}
+
+
+.table { display: table; }
+.row { display: table-row; }
+.cell { display: table-cell; }
