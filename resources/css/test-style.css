@@ -1,0 +1,7 @@
+.table { display: table; }
+.row {
+  display: table-row;
+  color: #44AACC;
+  background-color : #99FFCC;
+}
+.cell { display: table-cell; }
