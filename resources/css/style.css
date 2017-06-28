@@ -59,8 +59,3 @@
   height: 20px
   padding: 2px;
 }
-
-
-.table { display: table; }
-.row { display: table-row; }
-.cell { display: table-cell; }

@@ -1,0 +1,15 @@
+.table {
+  display: table;
+}
+.row {
+  display: table-row;
+  margin: auto;
+}
+.cell {
+  display: table-cell;
+  color: green;
+  vertical-align: top;
+  width: 400px;
+  border: 1px solid green;
+  padding: 10px;
+}
