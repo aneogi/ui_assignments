@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="UI Assignment">
+  <meta name="author" content="Avirup Neogi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Assignment</title>
+</head>
+<body class="background">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <script type="text/javascript" src="resources/js/script.js"></script>
+  <form id="top_panel">
+    <div class="table">
+        <div class="row">
+            <div class="cell cell-1">
+              <p id="p1">first container</p>
+              <input type ="text" name="box" id="tbox">
+            </div>
+            <div class="cell cell-2">
+              <p id="p2">Second container</p>
+                <input type="radio" name="radgrp" id="radgrp1" value="Radio One" checked>One<br/>
+                <input type="radio" name="radgrp" id="radgrp2" value="Radio Two" >Two<br/>
+                <input type="radio" name="radgrp" id="radgrp3" value="Radio Three" >Three<br/>
+                <input type="radio" name="radgrp" id="radgrp4" value="Radio Four" >Four<br/>
+            </div>
+            <div class="cell cell-3">
+              <p id="p1">third container</p>
+                <input type="checkbox" name="chkbx" id="chkbx1" value="Check One" checked>One<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Two" >Two<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Three" >Three<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Four" >Four<br/>
+            </div>
+            <div class="cell cell-4">
+              <p id="p1">Fourth container</p>
+                <textarea name="tarea" id="tarea"></textarea>
+            </div>
+        </div>
+    </div>
+  </form>
+  <form id="second_panel">
+    <div class="container">
+      <input type="button" onclick="fetchFromHTML()" value="Fetch from HTML" >
+    </div>
+  </form>
+  <form id="third_panel">
+    <div class="table">
+        <div class="row">
+            <div class="cell"><textarea value="" name="box1" id="box1" disabled ></textarea></div>
+            <div class="cell"><textarea value="" name="box2" id="box2" disabled></textarea></div>
+            <div class="cell"><textarea value="" name="box3" id="box3" disabled></textarea></div>
+            <div class="cell"><textarea value="" name="box4" id="box4" disabled></textarea></div>
+        </div>
+    </div>
+  </form>
+  <form id="fourth_panel">
+    <div class="container"></div>
+  </form>
+  <form id="fifth_panel">
+    <div class="table">
+      <div class="cell"><label>Email</label><input id="email" name="email" type="email" pattern=".+@beststartupever.com"></div>
+      <div class="cell"><label>Telephone</label><input id="telephone" name="telephone" type='tel' pattern="^\d{4}-\d{3}-\d{4}$" ></div>
+      <div class="cell"><label>URL</label><input id="url" name="url" type="url"></div>
+      <div class="cell"><label>Range</label><input id="range" name="range" type="range" min="1" max="100" value="0"></div>
+      </div>
+    </div>
+  </form>
+  <form id="sixth_panel">
+    <div class="container">
+      <input type="button" onclick="saveToLocalStorage()" value="Save to local storage" >
+    </div>
+  </form>
+  <form id="seventh_panel">
+    <div class="container">
+      <input type="button" onclick="fetchFromLocalStorage()" value="Fetch from local storage" >
+    </div>
+  </form>
+  <form id="eight_panel">
+    <div id="fetched_data" class="container"></div>
+  </form>
+</body>
+</html>

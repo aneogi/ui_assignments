@@ -1,3 +1,43 @@
+.background {
+  background-color: lightgoldenrodyellow;
+}
+
+.table {
+  display: table;
+}
+.row {
+  display: table-row;
+  margin: auto;
+}
+.cell {
+  display: table-cell;
+  color: green;
+  background-color: wheat;
+  vertical-align: top;
+  width: 400px;
+  border: 1px solid green;
+  padding: 10px;
+}
+.cell-1 {
+  background-color: azure;
+}
+.cell-2 {
+  background-color: khaki;
+}
+.cell-3 {
+  background-color: beige;
+}
+.cell-4 {
+  background-color: lavender;
+}
+
+.container {
+  text-align:center;
+  color: green;
+  vertical-align: top;
+  padding: 10px;
+}
+
 #ContainerDiv1 {
     width:100%;
     text-align:center;
