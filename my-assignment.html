@@ -2,57 +2,81 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Assignment 1</title>
+  <meta name="description" content="UI Assignment">
+  <meta name="author" content="Avirup Neogi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Assignment</title>
 </head>
-<body>
-  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-	<script type="text/javascript" src="resources/js/script.js"></script>
-  <div id="ContainerDiv1">
-    <div id="FirstDiv">
-      <p id="p1">this is the paragraph for the first container</p>
-      <form id="frm1">
-        <input type ="text" name=box id="tbox">
-      </form>
+<body class="background">
+  <script src="resources/lib/jquery-3.2.1.min.js"></script>
+  <script src="resources/js/script.js"></script>
+  <link rel="stylesheet" href="resources/css/style.css">
+  <form id="top_panel">
+    <div class="table">
+        <div class="row">
+            <div class="cell cell-1">
+              <p id="p1">first container</p>
+              <input type ="text" name="box" id="tbox">
+            </div>
+            <div class="cell cell-2">
+              <p id="p2">Second container</p>
+                <input type="radio" name="radgrp" id="radgrp1" value="Radio One" checked>One<br/>
+                <input type="radio" name="radgrp" id="radgrp2" value="Radio Two" >Two<br/>
+                <input type="radio" name="radgrp" id="radgrp3" value="Radio Three" >Three<br/>
+                <input type="radio" name="radgrp" id="radgrp4" value="Radio Four" >Four<br/>
+            </div>
+            <div class="cell cell-3">
+              <p id="p1">third container</p>
+                <input type="checkbox" name="chkbx" id="chkbx1" value="Check One" checked>One<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Two" >Two<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Three" >Three<br/>
+                <input type="checkbox" name="chkbx" id="chkbx2" value="Check Four" >Four<br/>
+            </div>
+            <div class="cell cell-4">
+              <p id="p1">Fourth container</p>
+                <textarea name="tarea" id="tarea"></textarea>
+            </div>
+        </div>
     </div>
-    <div id="SecondDiv">
-      <p id="p2">This is the paragraph for the second container</p>
-      <form id="frm2">
-        <input type="radio" name="radgrp" id="radgrp1" value="Radio One" checked>One<br/>
-        <input type="radio" name="radgrp" id="radgrp2" value="Radio Two" >Two<br/>
-      </form>
+  </form>
+  <form id="second_panel">
+    <div class="container">
+      <input type="button" onclick="fetchFromHTML()" value="Fetch from HTML" >
     </div>
-  </div>
-  <div id="ContainerDiv2">
-    <div id="ThirdDiv">
-      <p id="p3">this is the paragraph for the third container</p>
-      <form id="frm3">
-        <input type="checkbox" name="chkbx" id="chkbx1" value="Check One" checked>One<br/>
-        <input type="checkbox" name="chkbx" id="chkbx2" value="Check Two" >Two<br/>
-        <input type="checkbox" name="chkbx" id="chkbx3" value="Check Three" >Three<br/>
-        <input type="checkbox" name="chkbx" id="chkbx4" value="Check Four" >Four<br/>
-      </form>
+  </form>
+  <form id="third_panel">
+    <div class="table">
+        <div class="row">
+            <div class="cell"><textarea value="" name="box1" id="box1" disabled ></textarea></div>
+            <div class="cell"><textarea value="" name="box2" id="box2" disabled></textarea></div>
+            <div class="cell"><textarea value="" name="box3" id="box3" disabled></textarea></div>
+            <div class="cell"><textarea value="" name="box4" id="box4" disabled></textarea></div>
+        </div>
     </div>
-    <div id="FourthDiv">
-      <p id="p4">This is the paragraph for the fourth container</p>
-      <form id="frm4">
-        <textarea rows="4" cols="50" name="tarea" id="tarea"></textarea>
-      </form>
+  </form>
+  <form id="fourth_panel">
+    <div class="container"></div>
+  </form>
+  <form id="fifth_panel">
+    <div class="table">
+      <div class="cell"><label>Email : </label><input id="email" name="email" type="email" required placeholder="Valid email"></div>
+      <div class="cell"><label>Telephone : </label><input id="telephone" name="telephone" type='tel' required pattern="\d{10}"></div>
+      <div class="cell"><label>URL : </label><input id="url" name="url" type="url" required pattern="https?://.+"></div>
+      <div class="cell"><label>Range : </label><input id="range" name="range" type="range" class="cell-range" min="1" max="10" value="0"></div>
     </div>
-  </div>
-  <div id="ContainerDiv3">
-    <div id="FifthDiv">
-      <form id="frm5">
-        <input type="button" onclick="popup()" value="Click Me!" >
-      </form>
+  </form>
+  <form id="sixth_panel">
+    <div class="container">
+      <input type="button" onclick="saveToLocalStorage()" value="Save to local storage" >
     </div>
-    <div id="SixthDiv">
-      <form id="frm6">
-        <input type ="text" value="" name="box1" id="box1">
-        <input type ="text" value="" name="box2" id="box2">
-        <input type ="text" value="" name="box3" id="box3">
-        <input type ="text" value="" name="box4" id="box4">
-      </form>
+  </form>
+  <form id="seventh_panel">
+    <div class="container">
+      <input type="button" onclick="fetchFromLocalStorage()" value="Fetch from local storage" >
     </div>
-  </div>
+  </form>
+  <form id="eight_panel">
+    <div id="fetched_data"></div>
+  </form>
 </body>
 </html>

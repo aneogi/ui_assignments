@@ -31,54 +31,21 @@ function saveToLocalStorage(){
 
 function fetchFromLocalStorage(){
   var contact = JSON.parse(localStorage.getItem('contact'));
-
-
-}
-
-
-
-
-function fetchFromLocalStrorage1(){
-  var contact = JSON.parse(localStorage.getItem('contact'));
-
-  rowHead = '<div class="row">'+'<div class="cell">'+'Field'+'</div>'+'<div class="cell">'+'Value'+'</div>'+'</div>'
-  rowEmail = '<div class="row">'+'<div class="cell">'+'Email'+'</div>'+'<div class="cell">'+contact['email']+'</div>'+'</div>'
-  rowTelephone = '<div class="row">'+'<div class="cell">'+'Telephone'+'</div>'+'<div class="cell">'+contact['telephone']+'</div>'+'</div>'
-  rowUrl = '<div class="row">'+'<div class="cell">'+'Url'+'</div>'+'<div class="cell">'+contact['url']+'</div>'+'</div>'
-  rowRange = '<div class="row">'+'<div class="cell">'+'Range'+'</div>'+'<div class="cell">'+contact['range']+'</div>'+'</div>'
-
-  varTable = '<div class="table">' + rowHead + rowEmail + rowTelephone + rowUrl + rowRange + '</div>'
-
   var fetched_data = document.getElementById('fetched_data');
-  fetched_data.innerHTML = varTable
-}
 
+  var indx = 0;
+  var rowTable = '<table cellpadding="0" cellspacing="0">';
+  rowTable += '<tr><th>'+'Field'+'</th><th>'+'Value'+'</th></tr>';
 
-
-
-
-
-
-
-
-
-
-
-
-function popup(){
-  document.forms.frm6.box1.value = document.getElementById('tbox').value;
-  document.forms.frm6.box4.value = document.getElementById('tarea').value;
-
-  var rad_sel = document.querySelector('input[name="radgrp"]:checked').value;
-  document.forms.frm6.box2.value = rad_sel;
-
-  var chk_sel ='';
-  var checkboxes = document.getElementsByName('chkbx');
-  for (var j=0; j<checkboxes.length; j++){
-    if (checkboxes[j].checked){
-      chk_sel += checkboxes[j].value + ' ';
+  $.each(contact,function(key,value){
+    if (indx%2 == 0) {
+      rowTable += '<tr class="even"><td>'+key+'</td><td>'+value+'</td></tr>';
+    }else{
+      rowTable += '<tr class="odd"><td>'+key+'</td><td>'+value+'</td></tr>';
     }
-  }
-  document.forms.frm6.box3.value = chk_sel;
+    indx +=1;
+  });
 
+  rowTable += '</table>';
+  fetched_data.innerHTML = rowTable;
 }
