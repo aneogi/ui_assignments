@@ -34,18 +34,19 @@ function fetchFromLocalStorage(){
   var fetched_data = document.getElementById('fetched_data');
 
   var indx = 0;
-  var rowTable = '<table cellpadding="0" cellspacing="0">';
-  rowTable += '<tr><th>'+'Field'+'</th><th>'+'Value'+'</th></tr>';
+  var rowTable = '<div class="dyntable">';
+  rowTable += '<div class="dynrowHead"><div class="dyncell">'+'Field'+'</div><div class="dyncell">'+'Value'+'</div></div>';
 
   $.each(contact,function(key,value){
     if (indx%2 == 0) {
-      rowTable += '<tr class="even"><td>'+key+'</td><td>'+value+'</td></tr>';
-    }else{
-      rowTable += '<tr class="odd"><td>'+key+'</td><td>'+value+'</td></tr>';
+      rowTable += '<div class="dynrow even"><div class="dyncell">'+key+'</div><div class="dyncell">'+value+'</div></div>';
+    }  else{
+      rowTable += '<div class="dynrow odd"><div class="dyncell">'+key+'</div><div class="dyncell">'+value+'</div></div>';
     }
     indx +=1;
   });
 
-  rowTable += '</table>';
+  rowTable += '</div>';
   fetched_data.innerHTML = rowTable;
+
 }

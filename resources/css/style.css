@@ -39,18 +39,31 @@
   vertical-align: top;
   padding: 10px;
 }
-table{
+
+.dyntable {
+  display: table;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  border-color: green;
+  border: 10px;
+  border-left: 15px;
 }
-th{
+.dynrow {
+  display: table-row;
+  border-bottom: 1px solid #cef;
+  padding: 4px 5px;
+}
+.dynrowHead {
+  display: table-row;
   font-weight: bold;
   background-color: #acf;
   border-bottom: 1px solid #cef;
+  padding: 4px 5px;
 }
-td, th{
+.dyncell {
+  display: table-cell;
   padding: 4px 5px;
 }
 .odd{
